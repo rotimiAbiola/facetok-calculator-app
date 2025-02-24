@@ -56,7 +56,8 @@ jobs:
           pytest-coverage-path: ./pytest-coverage.txt
 
       - name: Debug Coverage Output
-        run: echo "Coverage HTML: '${{ steps.coverageComment.outputs.coverageHtml }}'"
+        run: |
+          echo "Coverage HTML: '${{ steps.coverageComment.outputs.coverageHtml }}'"
 
       - name: Update Readme with Coverage Html
         run: |
